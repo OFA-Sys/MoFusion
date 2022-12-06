@@ -1,0 +1,94 @@
+<html>
+<meta name="description" content="Pretrained Motion Diffusion">
+<link rel="stylesheet" href="jemdoc.css" type="text/css">
+<title>MoFusion: Pretrained Diffusion Models for Unified Human Motion Synthesis</title>
+<body>
+<div>
+    <h1 style="text-align:center">
+        Pretrained Diffusion Models for Unified Human Motion Synthesis
+    </h1>
+</div>
+<div id="layout-content" style="margin-top:25px">
+    <p style="text-align:center">
+        <a href="https://scholar.google.com/citations?user=WdDFFlIAAAAJ&hl=en" target="_blank">
+            Jianxin Ma
+        </a>,
+        <a href="https://scholar.google.com/citations?user=ylhI1JsAAAAJ&hl=en" target="_blank">
+            Shuai Bai
+        </a>,
+        <a href="https://scholar.google.com/citations?user=QeSoG3sAAAAJ&hl=en" target="_blank">
+            Chang Zhou
+        </a>
+    </p>
+    <p style="text-align:center">
+        DAMO Academy, Alibaba Group
+    </p>
+    <p style="text-align:center">
+        <a href="https://arxiv.org/abs/2212.02837" target="_blank">[paper]</a>
+        <a target="_blank">[code]</a>
+        <a target="_blank">[data]</a>
+    </p>
+
+    <img src="assets/fig_tasks.jpg" width="100%">
+
+    <h2>
+        Abstract
+    </h2>
+
+    <p>
+        Generative modeling of human motion has broad applications in computer animation, virtual reality, and robotics.
+        Conventional approaches develop separate models for different motion synthesis tasks, and typically use a model
+        of a small size to avoid overfitting the scarce data available in each setting. It remains an open question
+        whether developing a single unified model is feasible, which may 1) benefit the acquirement of novel skills by
+        combining skills learned from multiple tasks, and 2) help in increasing the model capacity without overfitting
+        by combining multiple data sources. Unification is challenging because 1) it involves diverse control signals as
+        well as targets of varying granularity, and 2) motion datasets may use different skeletons and default poses. In
+        this paper, we present <b>MoFusion</b>, a framework for unified motion synthesis. MoFusion employs a Transformer
+        backbone to ease the inclusion of diverse control signals via cross attention, and pretrains the backbone as a
+        diffusion model to support multi-granularity synthesis ranging from motion completion of a body part to
+        whole-body motion generation. It uses a learnable adapter to accommodate the differences between the default
+        skeletons used by the pretraining and the fine-tuning data. Empirical results show that pretraining is vital for
+        scaling the model size without overfitting, and demonstrate MoFusion's potential in various tasks, e.g.,
+        text-to-motion, motion completion, and zero-shot mixing of multiple control signals.
+    </p>
+
+    <h2>
+        Keywords
+    </h2>
+    <ul>
+        <li>Diffusion models. Multitask pretraining. Zero-shot generalization. Human motion synthesis.</li>
+        <li>Text-to-motion. Music-to-dance. Motion in-betweening. Body-part editing. Inverse kinematics.</li>
+    </ul>
+
+    <h2>
+        Video
+    </h2>
+
+    <video width="100%" controls muted autoplay loop preload='auto' playsinline>
+        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
+        <source src="assets/showcases_all.mp4#t=0.001" type="video/mp4"/>
+    </video>
+
+    <h2>
+        Citation
+    </h2>
+
+    <pre>
+      <code>
+@article{ma2022mofusion,
+  title={Pretrained Diffusion Models for Unified Human Motion Synthesis},
+  author={Ma, Jianxin and Bai, Shuai and Zhou, Chang},
+  journal={arXiv preprint arXiv:2212.02837},
+  year={2022},
+}
+      </code>
+    </pre>
+
+    <div id="footer">
+        <div id="footer-text"></div>
+    </div>
+</div>
+
+Last updated on Dec 6, 2022.
+</body>
+</html>
